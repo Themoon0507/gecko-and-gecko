@@ -1,0 +1,12 @@
+{
+  "name": "gecko-and-gecko",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "呱呱與呱妹的公開守宮照片時間軸",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "check": "node --check src/app.js && node --check scripts/build.mjs && node --check scripts/dev.mjs"
+  }
+}

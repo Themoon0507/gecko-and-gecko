@@ -1,0 +1,22 @@
+{
+  "title": "Gecko and Gecko",
+  "tagline": "兩隻守宮，兩種花色，一本慢慢長大的相簿。",
+  "description": "記錄呱呱與呱妹的日常、成長與每一段值得收藏的時光。",
+  "imageKitEndpoint": "https://ik.imagekit.io/YOUR_IMAGEKIT_ID",
+  "locale": "zh-TW",
+  "timeZone": "Asia/Taipei",
+  "pets": [
+    {
+      "id": "guagua",
+      "name": "呱呱",
+      "kind": "白底黑點豹紋守宮",
+      "accent": "charcoal"
+    },
+    {
+      "id": "guamei",
+      "name": "呱妹",
+      "kind": "橘白相間肥尾守宮",
+      "accent": "apricot"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ded3ed">
+    <meta
+      name="description"
+      content="Gecko and Gecko——記錄呱呱與呱妹的日常、成長與每一段值得收藏的時光。"
+    >
+    <title>Gecko and Gecko</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./series-data.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#albums">跳到照片系列</a>
+
+    <div class="botanical-frame" aria-hidden="true"></div>
+
+    <header class="site-header shell">
+      <a class="brand" href="./" aria-label="Gecko and Gecko 首頁">
+        <span class="brand-mark" aria-hidden="true">G<span>&</span>G</span>
+        <span class="brand-copy">
+          <strong>Gecko and Gecko</strong>
+        </span>
+      </a>
+      <a class="header-link" href="#albums">Timeline <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main>
+      <section class="hero shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Gecko <em>and</em> Gecko</h1>
+        </div>
+        <div id="pet-profiles" class="pet-profiles" aria-label="守宮介紹"></div>
+      </section>
+
+      <section id="albums" class="explorer shell" aria-labelledby="albums-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="albums-title">Timeline</h2>
+          </div>
+          <p id="result-count" class="result-count" aria-live="polite"></p>
+        </div>
+
+        <div class="filter-panel glass-panel" aria-label="照片系列篩選">
+          <fieldset class="filter-group">
+            <legend>Gecko</legend>
+            <div id="pet-filters" class="segmented-control"></div>
+          </fieldset>
+
+          <div class="date-fields">
+            <label>
+              <span>From</span>
+              <input id="date-from" type="date">
+            </label>
+            <span class="date-separator" aria-hidden="true">—</span>
+            <label>
+              <span>To</span>
+              <input id="date-to" type="date">
+            </label>
+          </div>
+
+          <button id="clear-filters" class="clear-button" type="button">Reset</button>
+        </div>
+
+        <div id="timeline" class="timeline"></div>
+
+        <div id="empty-state" class="empty-state glass-panel" hidden>
+          <span aria-hidden="true">⌁</span>
+          <h3>No albums found</h3>
+          <button id="empty-clear" type="button">Show all</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <p>Made gently for 呱呱 & 呱妹.</p>
+      <a href="#top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Top ↑</a>
+    </footer>
+
+    <dialog id="series-dialog" class="series-dialog" aria-labelledby="dialog-title">
+      <button id="dialog-close" class="dialog-close" type="button" aria-label="關閉照片系列">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <div id="image-viewer" class="image-viewer" role="dialog" aria-modal="true" aria-label="放大照片" hidden>
+      <button id="image-viewer-close" type="button" aria-label="關閉放大照片">×</button>
+      <figure>
+        <img id="image-viewer-photo" src="" alt="">
+        <figcaption id="image-viewer-caption"></figcaption>
+      </figure>
+    </div>
+
+    <noscript>
+      <div class="noscript">這個時間軸需要啟用 JavaScript 才能篩選與開啟照片系列。</div>
+    </noscript>
+  </body>
+</html>
