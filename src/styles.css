@@ -112,7 +112,7 @@ a {
   background-color: var(--glass);
   background-image: url("./frosted-glass-texture.png");
   background-position: center;
-  background-size: 460px 460px;
+  background-size: 680px 680px;
   background-blend-mode: soft-light;
   border: 1px solid rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow);
@@ -580,7 +580,7 @@ a {
   color: rgba(255, 255, 255, 0.94);
   background-image: url("./frosted-glass-texture.png");
   background-position: center;
-  background-size: 430px 430px;
+  background-size: 680px 680px;
   background-blend-mode: soft-light;
 }
 
@@ -771,7 +771,7 @@ a {
   background-color: rgba(221, 210, 237, 0.88);
   background-image: url("./frosted-glass-texture.png");
   background-position: center;
-  background-size: 520px 520px;
+  background-size: 760px 760px;
   background-blend-mode: soft-light;
 }
 
@@ -898,7 +898,7 @@ a {
   background-color: rgba(233, 226, 243, 0.78);
   background-image: url("./frosted-glass-texture.png");
   background-position: center;
-  background-size: 430px 430px;
+  background-size: 680px 680px;
   background-blend-mode: soft-light;
 }
 
@@ -1051,6 +1051,36 @@ a {
 @media (max-width: 700px) {
   :root {
     --shell: min(100% - 26px, 1160px);
+  }
+
+  .botanical-frame {
+    background-image: none;
+    opacity: 0.52;
+  }
+
+  .botanical-frame::before,
+  .botanical-frame::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    content: "";
+    background-image: url("./white-botanical-border-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .botanical-frame::before {
+    top: 0;
+    height: 58vh;
+    max-height: 560px;
+    background-position: center top;
+  }
+
+  .botanical-frame::after {
+    bottom: 0;
+    height: 62vh;
+    max-height: 620px;
+    background-position: center bottom;
   }
 
   .site-header {
